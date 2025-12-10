@@ -266,6 +266,56 @@ h2 {
     }
 }
 
+/* Scrolling Image Effect */
+.project-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    position: relative;
+    background-color: #1a1a1a;
+}
+
+.scrolling-image {
+    width: 100%;
+    display: block;
+    /* Initial state: show top */
+    transform: translateY(0);
+    transition: transform 4s ease-in-out;
+}
+
+.project-card:hover .scrolling-image {
+    /* On hover, scroll to bottom. 
+       Calculation: translateY( - (imgHeight - containerHeight) )
+       Since we can't know exact height in CSS easily without background-image trick,
+       we'll use the background-image approach for better control or a percentage estimate.
+       Reverting to background-image approach which is smoother for this case.
+    */
+}
+
+/* Better approach for variable height images: Background Image */
+.project-preview {
+    width: 100%;
+    height: 200px;
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    transition: background-position 5s ease-in-out;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #222;
+    /* Placeholder bg */
+}
+
+.project-card:hover .project-preview {
+    background-position: bottom center;
+}
+
+/* Disable default mouse tracking glow for this specific card type if desired? 
+   User said "pas d'animation" (maybe referring to the card movement or just stating it's static content).
+   I'll keep the card hover but add this specific visual.
+*/
 @keyframes pulse {
     0% {
         opacity: 0.5;
