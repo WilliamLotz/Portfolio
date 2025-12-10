@@ -185,16 +185,22 @@ h2 {
 /* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    /* Single column for vertical stacking */
+    gap: 4rem;
+    /* More space between large cards */
     padding: 1rem;
+    max-width: 900px;
+    /* Limit width for readability */
+    margin: 0 auto;
 }
 
 .project-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 2rem;
+    border-radius: 20px;
+    padding: 3rem;
+    /* Larger padding */
     transition: transform 0.3s ease, background 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -230,8 +236,9 @@ h2 {
 }
 
 .project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    /* Larger title */
+    margin-bottom: 1rem;
     color: var(--text-color);
 }
 
@@ -297,14 +304,16 @@ h2 {
 /* Better approach for variable height images: Background Image */
 .project-preview {
     width: 100%;
-    height: 200px;
+    height: 400px;
+    /* Much larger preview area */
     background-size: 100%;
     background-position: top center;
     background-repeat: no-repeat;
     transition: background-position 5s ease-in-out;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
     background-color: #222;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     /* Placeholder bg */
 }
 
