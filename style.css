@@ -1,7 +1,9 @@
 :root {
-    --bg-color: #0f172a; /* Slate 900 - Deep Blueish */
+    --bg-color: #0f172a;
+    /* Slate 900 - Deep Blueish */
     --text-color: #f1f5f9;
-    --accent-color: #38bdf8; /* Sky 400 - Bright Blue */
+    --accent-color: #38bdf8;
+    /* Sky 400 - Bright Blue */
     --accent-glow: rgba(56, 189, 248, 0.5);
     --secondary-color: #94a3b8;
     --font-main: 'Outfit', sans-serif;
@@ -59,10 +61,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    background: rgba(15, 23, 42, 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
@@ -198,11 +201,11 @@ h2 {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     padding: 3rem;
     /* Larger padding */
@@ -388,19 +391,40 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    min-width: 100px;
-    backdrop-filter: blur(8px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 1rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    min-width: 140px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    transform: rotate(45deg);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.skill-item:hover::before {
+    opacity: 1;
 }
 
 .skill-icon {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
     object-fit: contain;
     filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.3));
     transition: transform 0.3s ease;
@@ -449,14 +473,16 @@ h2 {
 
 .gallery-item {
     aspect-ratio: 1/1;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item:hover {
