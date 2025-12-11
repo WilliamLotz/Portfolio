@@ -149,6 +149,12 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 0 20px var(--accent-glow);
     backdrop-filter: blur(4px);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary:hover {
@@ -300,14 +306,7 @@ h2 {
     transition: transform 4s ease-in-out;
 }
 
-.project-card:hover .scrolling-image {
-    /* On hover, scroll to bottom. 
-       Calculation: translateY( - (imgHeight - containerHeight) )
-       Since we can't know exact height in CSS easily without background-image trick,
-       we'll use the background-image approach for better control or a percentage estimate.
-       Reverting to background-image approach which is smoother for this case.
-    */
-}
+
 
 /* Better approach for variable height images: Background Image */
 .project-preview {
@@ -366,9 +365,17 @@ h2 {
 /* Skills */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     margin-top: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 }
 
 .skill-category h3 {
@@ -670,4 +677,72 @@ h2 {
     text-decoration: none;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.1);
+}
+
+/* Email Button Specifics */
+#email-btn {
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#email-btn .text {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: block;
+}
+
+/* Success State */
+#email-btn.success {
+    background-color: #22c55e !important;
+    /* Green-500 */
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+}
+
+#email-btn.success .text {
+    animation: textSlide 0.5s ease forwards;
+}
+
+/* Ripple/Explosion Effect */
+#email-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease-out, height 0.6s ease-out, opacity 0.6s ease-out;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#email-btn.success::after {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+}
+
+@keyframes textSlide {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    51% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

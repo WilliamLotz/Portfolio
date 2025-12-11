@@ -118,4 +118,32 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+    // Email Copy Functionality
+    const emailBtn = document.getElementById('email-btn');
+    if (emailBtn) {
+        const emailSpan = emailBtn.querySelector('.text');
+        const originalText = emailSpan.textContent;
+
+        emailBtn.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText('william.lotz64@gmail.com');
+                
+                // Success Animation
+                emailSpan.textContent = 'Email Copié !';
+                emailBtn.classList.add('success');
+
+                // Revert after 2s
+                setTimeout(() => {
+                    emailBtn.classList.remove('success');
+                    // Small delay to allow transition if needed, or immediate
+                    emailSpan.textContent = originalText;
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy:', err);
+                // Fallback (e.g. open mailto as last resort)
+                window.location.href = 'mailto:william.lotz64@gmail.com';
+            }
+        });
+    }
+
 });
