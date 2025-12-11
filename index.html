@@ -20,6 +20,7 @@
         <ul class="nav-links">
             <li><a href="#home">Accueil</a></li>
             <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -45,6 +46,39 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Langages</h3>
+                    <div class="skill-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>Swift</span>
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>C</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Outils & Frameworks</h3>
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>VS Code</span>
+                        <span>Xcode</span>
+                        <span>Android Studio</span>
+                        <span>MySQL</span>
+                        <span>Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects" class="projects">
         <div class="container">
             <h2>Mes Projets</h2>
@@ -57,7 +91,6 @@
                         <p>Site web complet développé durant ma licence informatique pour la gestion et la présentation
                             d'une association de gymnastique.</p>
                         <div class="project-links">
-                            <!-- Placeholder for link if available -->
                             <span class="status">Projet Universitaire</span>
                         </div>
                     </div>
@@ -82,13 +115,14 @@
                         <h3>Gestion de Matchs</h3>
                         <p class="project-tech">Web Fullstack</p>
 
-                        <!-- Image Preview Window -->
-                        <!-- Remplacez 'images/capture.png' par le vrai nom de votre image -->
-                        <div class="project-preview" style="background-image: url('images/captureSitePlage.png');">
+                        <!-- PDF Display -->
+                        <div class="pdf-container">
+                            <iframe src="images/SitePlageEntier.pdf" type="application/pdf" width="100%" height="500px">
+                            </iframe>
                         </div>
 
                         <p>Outil personnel développé pour gérer les matchs et les statistiques d'une saison de football
-                            d'été. (Survolez pour voir tout le site)</p>
+                            d'été.</p>
                         <div class="project-links">
                             <span class="status">Projet Personnel</span>
                         </div>
@@ -98,11 +132,52 @@
         </div>
     </section>
 
+    <!-- Logos Section -->
+    <section id="logos" class="logos">
+        <div class="container">
+            <h2>Mes Logos</h2>
+            <div class="gallery-grid">
+                <!-- Ajouter les images de logos ici -->
+                <div class="gallery-placeholder">
+                    <p>Vos Logos ici</p>
+                </div>
+                <div class="gallery-placeholder">
+                    <p>Vos Logos ici</p>
+                </div>
+                <div class="gallery-placeholder">
+                    <p>Vos Logos ici</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiches Section -->
+    <section id="posters" class="posters">
+        <div class="container">
+            <h2>Mes Affiches</h2>
+            <div class="gallery-grid">
+                <!-- Ajouter les images d'affiches ici -->
+                <div class="gallery-placeholder">
+                    <p>Vos Affiches ici</p>
+                </div>
+                <div class="gallery-placeholder">
+                    <p>Vos Affiches ici</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact</h2>
             <p>N'hésitez pas à me contacter pour toute opportunité.</p>
-            <a href="mailto:william.lotz@gmail.com" class="email-link">william.lotz64@gmail.com</a>
+            <div class="contact-methods">
+                <a href="mailto:william.lotz64@gmail.com" class="btn-primary">Envoyer un mail</a>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/votreprofile" target="_blank" class="social-link">LinkedIn</a>
+                    <a href="path/to/cv.pdf" target="_blank" class="social-link">Mon CV</a>
+                </div>
+            </div>
         </div>
     </section>
 
