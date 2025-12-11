@@ -78,4 +78,44 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.setProperty('--mouse-y', `${y}px`);
         });
     });
+
+    // CV Modal Logic
+    const cvModal = document.getElementById('cv-modal');
+    const cvBtn = document.getElementById('cv-trigger');
+    const closeBtn = document.querySelector('.close-modal');
+
+    // Open Modal
+    cvBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        cvModal.style.display = 'flex';
+        // Force reflow for transition
+        setTimeout(() => {
+            cvModal.style.opacity = '1';
+        }, 10);
+    });
+
+    // Close Modal Function
+    function closeModal() {
+        cvModal.style.opacity = '0';
+        setTimeout(() => {
+            cvModal.style.display = 'none';
+        }, 300);
+    }
+
+    // Close on X click
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close on outside click
+    window.addEventListener('click', (e) => {
+        if (e.target == cvModal) {
+            closeModal();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && cvModal.style.display === 'flex') {
+            closeModal();
+        }
+    });
 });
