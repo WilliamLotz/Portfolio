@@ -8,15 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+
+    <div class="bg-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
     <nav class="navbar">
-        <div class="logo">WL.</div>
+        <div class="logo">MR. LOTZ</div>
+        <div class="menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Accueil</a></li>
             <li><a href="#about">À propos</a></li>
@@ -30,8 +40,8 @@
         <div class="hero-content">
             <span class="greeting">Bonjour, je suis</span>
             <h1>William <span class="accent">LOTZ</span></h1>
-            <p class="subtitle">Développeur & Créateur Digital</p>
-            <a href="#contact" class="btn-primary">Me Contacter</a>
+            <a href="#about" class="btn-primary scroll-btn">Découvrir mon travail <span class="arrow">↓</span></a>
+
         </div>
         <div class="hero-visual">
             <div class="glow-circle"></div>
@@ -41,8 +51,15 @@
     <section id="about" class="about">
         <div class="container">
             <h2>À Propos</h2>
-            <p>Passionné par la technologie et l'innovation, je crée des expériences numériques modernes et intuitives.
-                Mon objectif est de transformer des idées en réalité grâce à un code propre et un design impactant.</p>
+            <p>Étudiant en <strong>3ème année de Licence Informatique</strong>, je me spécialise dans le numérique pour
+                les environnements connectés.
+                Je suis passionné par la transformation d'idées en solutions concrètes grâce au code.</p>
+            <p style="margin-top: 1rem;">
+                En dehors du développement, je suis <strong>sauveteur côtier</strong> l'été sur les plages d'Anglet, ce
+                qui m'a appris la rigueur et l'esprit d'équipe.
+                Récemment ceinture noire de judo, j'aime relever des défits. Je suis également un bricoleur autonome et
+                sérieux.
+            </p>
         </div>
     </section>
 
@@ -52,27 +69,70 @@
             <h2>Mes Compétences</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Langages</h3>
+                    <center>
+                        <h3>Langages</h3>
+                    </center>
                     <div class="skill-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>PHP</span>
-                        <span>Swift</span>
-                        <span>Java</span>
-                        <span>Python</span>
-                        <span>C</span>
+                        <div class="skill-item">
+                            <img src="images/icon_html.png" alt="HTML5" class="skill-icon">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_css.png" alt="CSS" class="skill-icon">
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_js.png" alt="JavaScript" class="skill-icon">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_php.png" alt="PHP" class="skill-icon">
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_swift.png" alt="Swift" class="skill-icon">
+                            <span>Swift</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_java.png" alt="Java" class="skill-icon">
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_python.png" alt="Python" class="skill-icon">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_c.png" alt="C" class="skill-icon">
+                            <span>C</span>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Outils & Frameworks</h3>
+                    <center>
+                        <h3>Outils & Frameworks</h3>
+                    </center>
                     <div class="skill-tags">
-                        <span>Git</span>
-                        <span>VS Code</span>
-                        <span>Xcode</span>
-                        <span>Android Studio</span>
-                        <span>MySQL</span>
-                        <span>Figma</span>
+                        <div class="skill-item">
+                            <img src="images/icon_git.png" alt="Git" class="skill-icon">
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_vscode.png" alt="VS Code" class="skill-icon">
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_xcode.png" alt="Xcode" class="skill-icon">
+                            <span>Xcode</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_android.png" alt="Android Studio" class="skill-icon">
+                            <span>Android Studio</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="images/icon_mysql.png" alt="MySQL" class="skill-icon">
+                            <span>MySQL</span>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -88,11 +148,8 @@
                     <div class="project-content">
                         <h3>Association de Gym</h3>
                         <p class="project-tech">HTML • CSS • PHP</p>
-                        <div class="pdf-container">
-                            <iframe src="images/SiteGymEntier.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
-                                type="application/pdf" width="100%" height="500px">
-                            </iframe>
-                        </div>
+                        <p>Site web complet développé durant ma licence informatique pour la gestion et la présentation
+                            d'une association de gymnastique.</p>
                         <div class="project-links">
                             <span class="status">Projet Universitaire</span>
                         </div>
@@ -106,9 +163,8 @@
                         <p class="project-tech">Swift • SwiftUI</p>
                         <p>Application native iOS intuitive et performante. Conception de l'interface et développement
                             des fonctionnalités.</p>
-
                         <div class="project-links">
-                            <span class="status">Mobile</span>
+                            <span class="status">Projet Universitaire</span>
                         </div>
                     </div>
                 </article>
@@ -117,7 +173,7 @@
                 <article class="project-card">
                     <div class="project-content">
                         <h3>Gestion de Matchs</h3>
-                        <p class="project-tech">Web Fullstack</p>
+
 
                         <!-- PDF Display -->
                         <div class="pdf-container">
@@ -125,7 +181,11 @@
                                 type="application/pdf" width="100%" height="500px">
                             </iframe>
                         </div>
+                        <div class="mobile-pdf-message">
+                            <div class="icon-computer">💻</div>
+                            <p>Cette prévisualisation est optimisée pour ordinateur.</p>
 
+                        </div>
                         <p>Outil personnel développé pour gérer les matchs et les statistiques d'une saison de football
                             d'été.</p>
                         <div class="project-links">
@@ -141,12 +201,23 @@
     <section id="logos" class="logos">
         <div class="container">
             <h2>Mes Logos</h2>
-            <div class="gallery-grid">
+            <p class="section-description">
+                La création de logos est pour moi la recherche de l'essence d'une marque.
+                J'aime simplifier les formes pour obtenir un design intemporel et mémorable.
+            </p>
+            <div class="gallery-grid center-grid">
                 <div class="gallery-item logo-item">
                     <img src="images/LOGO_VILLAGEALERT.png" alt="Logo Village Alert">
                 </div>
                 <div class="gallery-item logo-item">
                     <img src="images/LOGO_Necapture.png" alt="Logo Necapture">
+                </div>
+                <div class="gallery-item logo-item">
+                    <img src="images/Logo ESP.png" alt="Logo ESP">
+                </div>
+                <!-- Landscape Logo -->
+                <div class="gallery-item logo-item landscape-logo">
+                    <img src="images/LOGO_GymSync.png" alt="Logo GymSync">
                 </div>
             </div>
         </div>
@@ -156,12 +227,16 @@
     <section id="posters" class="posters">
         <div class="container">
             <h2>Mes Affiches</h2>
+            <p class="section-description">
+                À travers ces affiches, j'explore la composition, la typographie et la couleur pour transmettre un
+                message fort et capter l'attention au premier regard.
+            </p>
             <div class="gallery-grid">
-                <div class="gallery-item poster-item" style="width: fit-content;">
-                    <img src="images/Poster_1.png" alt="Poster 1">
-                </div>
                 <div class="gallery-item poster-item">
                     <img src="images/Affiche_projet3.png" alt="Affiche Projet 3">
+                </div>
+                <div class="gallery-item poster-item landscape-poster">
+                    <img src="images/Poster_1.png" alt="Poster 1">
                 </div>
                 <div class="gallery-item poster-item">
                     <img src="images/Affiche_projet1.png" alt="Affiche Projet 1">
@@ -173,19 +248,34 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>N'hésitez pas à me contacter pour toute opportunité.</p>
+            <center>
+                <p>N'hésitez pas à me contacter pour toute opportunité.</p>
+            </center>
             <div class="contact-methods">
-                <a href="mailto:william.lotz64@gmail.com" class="btn-primary">Envoyer un mail</a>
+                <button id="email-btn" class="btn-primary" aria-label="Copier l'adresse email">
+                    <span class="text">Envoyer un mail</span>
+                </button>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/votreprofile" target="_blank" class="social-link">LinkedIn</a>
-                    <a href="path/to/cv.pdf" target="_blank" class="social-link">Mon CV</a>
+                    <a href="https://www.linkedin.com/in/william-lotz-6a7420302" target="_blank"
+                        class="social-link">LinkedIn</a>
+                    <a href="#" id="cv-trigger" class="social-link">Mon CV</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CV Modal -->
+    <div id="cv-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="images/Cv_stage_LOTZ.png" alt="CV William Lotz">
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2025 William LOTZ. Tous droits réservés.</p>
+        <center>
+            <p>&copy; 2025 William LOTZ. Tous droits réservés.</p>
+        </center>
     </footer>
 
     <script src="script.js"></script>
